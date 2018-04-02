@@ -1,0 +1,42 @@
+:imagesdir: ./doc/
+
+My graduation design... very funny and simple, hha...
+
+It is a simple video stream monitor using UVC(usb video class),
+V4L2(video for linux), tcp, jpg and AVI format container.
+You can use a logitech camera(mine is c270),
+a embedded SoC board(mine is FriendlyARM called tiny6410
+with a usb1.0 port and a network port) and a Windows(or a Linux)
+operation system client which installs java runtime environment to run the client.
+
+It's framework is shown in the picture:
+
+image::frame.jpg[]
+
+The server is running in the embedded board:
+
+image::server1.jpg[]
+image::server2.jpg[]
+
+Now, the monitor's real-time friendly interface is:
+
+image::client.jpg[]
+
+As you can see, it provides taking photo, recording and exit button which
+generate a jpg picture or a AVI format video stream saving in the SD card.
+
+Not bad, hha, but it's very easy. I directly use tcp to send a real-time video frames
+ which capture from the camera using UVC driver to the jave client, no streaming media protocol.
+ And the jave client use two OS threads while one recv the whole picture of tcp stream data and
+ immediately showing in the java swing frame.So, if the server sends frames without interval and
+ the client refresh the java frame without interval when receiving video frames,
+ ,it can reach a real-time monitor system.
+
+
+Finally, about the AVI.I use the camera directly capture jpg picture, so i can
+ encode the jpg to a AVI container according to the AVI format which specify the
+ video file header format, every jpg file header format and tail format. But, unfortunately,
+ i didn't capture voice stream to the video file.
+
+(I think very funny files are `src/monitor_v4l2_uvc.c` and `src/monitor_socket_embeded.c`.
+One is the wrapper of v4l2 and another is a linux c wrapper of tcp operation.)

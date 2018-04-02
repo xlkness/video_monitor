@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu Apr 14 16:15:11 CST 2016
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=monitorClient3.0_fat.jar
+manifest.mergeall=true
+manifest.mainclass=window.MainWindow
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
