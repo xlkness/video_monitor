@@ -22,7 +22,7 @@ Now, the monitor's real-time friendly interface is:
 
 connection pane:
 
-image::c1.jpg[]
+image::c1.png[]
 
 video pane:
 
