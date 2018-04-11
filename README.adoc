@@ -20,6 +20,10 @@ image::server2.jpg[]
 
 Now, the monitor's real-time friendly interface is:
 
+connection pane:
+image::c1.jpg[]
+
+video pane:
 image::client.jpg[]
 
 As you can see, it provides taking photo, recording and exitint button which
